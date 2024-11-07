@@ -1,0 +1,106 @@
+/* custom properties */
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-slate-300: hsl(212, 45%, 89%);
+  --clr-slate-500: hsl(216, 15%, 48%);
+  --clr-slate-900: hsl(218, 44%, 22%);
+
+  --gap-primary: 1.5em;
+  --fs-primary: 1rem;
+  --fs-medium: 0.7rem
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+/* resets */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+body {
+  font-family: "Outfit";
+  height: 100vh;
+
+  display: grid;
+  place-content: center;
+
+  background-color: var(--clr-slate-300);
+
+  min-width: 320px;
+
+}
+
+/* utility classes */
+
+.container {
+  background-color: var(--clr-white);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-primary);
+
+  padding: 1em;
+  width: min(400px, 90vw);
+
+}
+
+.container {
+  text-align: center;
+}
+.qr-code {
+  border-radius: inherit;
+}
+
+.title {
+  color: var(--clr-slate-900);
+  font-size: 1.7em;
+}
+
+.description {
+  color: var(--clr-slate-500);
+  font-size: var(--fs-primary);
+  margin-inline: 1rem;
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: var(--fs-medium)
+  }
+}
